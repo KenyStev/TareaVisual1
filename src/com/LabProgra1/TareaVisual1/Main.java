@@ -47,6 +47,7 @@ public class Main extends javax.swing.JFrame {
         txtCuotMensual = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Prestamo para Vehiculo");
 
         jLabel1.setText("Costo del Auto:");
 
@@ -55,6 +56,14 @@ public class Main extends javax.swing.JFrame {
         jLabel3.setText("Prima:");
 
         jLabel4.setText("Cantidad de Cuotas:");
+
+        txtCostAuto.setText("0.0");
+
+        txtTipeAuto.setToolTipText("Tipo de Vehiculo: Pickup, Turismo, Camioneta o Camion");
+
+        txtPrima.setText("0.0");
+
+        txtCantCuots.setText("0");
 
         btnCalc.setText("Calcular");
         btnCalc.addActionListener(new java.awt.event.ActionListener() {
@@ -174,8 +183,8 @@ public class Main extends javax.swing.JFrame {
         double costo, prima, subTotal;
         String estado = "Prestamo OK";
         
-        costo = Integer.parseInt(txtCostAuto.getText());
-        prima = Integer.parseInt(txtPrima.getText());
+        costo = Double.parseDouble(txtCostAuto.getText());
+        prima = Double.parseDouble(txtPrima.getText());
         subTotal = costo-prima;
         txtMonto.setText(""+subTotal);
         
