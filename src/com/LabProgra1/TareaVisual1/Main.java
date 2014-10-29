@@ -214,11 +214,14 @@ public class Main extends javax.swing.JFrame {
             case "TURISMO": montoSeguro = costo * 0.3; break;
             case "PICKUP": montoSeguro = costo * 0.3; break;
             case "CAMIONETA": montoSeguro = costo * 0.35; break;
-            case "CAMION": montoSeguro = costo * 0.25; break;    
+            case "CAMION": montoSeguro = costo * 0.25; break;
         } 
         txtMontoSeguro.setText(""+montoSeguro);
         monTot = subTotal + montoSeguro;
         txtMonTot.setText(""+monTot);
+        
+        double cuota = monTot / cantCuots;
+        txtCuotMensual.setText(""+cuota);
     }//GEN-LAST:event_btnCalcActionPerformed
 
     /**
